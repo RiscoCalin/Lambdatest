@@ -14,7 +14,7 @@ public class KeyPressTests extends BasePage {
     public void setUp() {
         super.setUp();
         keyPressPage = new KeyPressPage(driver);
-
+    }
 
         @Description("Write a letter and check the result")
 
@@ -26,7 +26,7 @@ public class KeyPressTests extends BasePage {
             Assert.assertEquals(actualResult, "You entered:ALT");
 
 
-        }
+
 
     }
 }
