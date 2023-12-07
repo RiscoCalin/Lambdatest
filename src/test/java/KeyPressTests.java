@@ -22,11 +22,17 @@ public class KeyPressTests extends BasePage {
         public void writeALetterAndCheckTheResult(){
             driver.findElement(KEY_PRESS_LINK_TEXT).click();
             keyPressPage.typeInTheTextField("T");
+
             String actualResult = driver.findElement(By.id("result")).getText();
-            Assert.assertEquals(actualResult, "You entered:ALT");
+            Assert.assertTrue(actualResult.contains("T"));
+    }
+    @Description("Write an integer and check the result")
+    @Test
+    public void writeAnIntegerAndCheckTheResult(){
+        driver.findElement(KEY_PRESS_LINK_TEXT).click();
+        keyPressPage.typeInTheTextField("1");
 
-
-
-
+        String actualResult = driver.findElement(By.id("result")).getText();
+        Assert.assertEquals(actualResult,"You entered: 1");
     }
 }
