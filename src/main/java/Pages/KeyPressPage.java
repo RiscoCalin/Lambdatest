@@ -23,10 +23,13 @@ public class KeyPressPage extends BasePage {
     public void typeInTheTextField(String text) {
         textField.sendKeys(text);
     }
-    public void typeInShiftKey(){
+
+    public void typeInCONTROLKey() {
         textField.click();
         Actions action = new Actions(driver);
-        action.keyDown(Keys.SHIFT).perform();
+        action.keyDown(Keys.CONTROL).perform();
     }
 
-}
+
+    }
+
